@@ -1,0 +1,107 @@
+/* App title */
+"app.title" = "Delete Screenshots";
+
+/* Bottom bar */
+"auto_select" = "Auto Select";
+"delete" = "Delete";
+"delete_count" = "Delete (%d)";
+"pause_auto_select" = "Pause";
+"pause_auto_select_count" = "Pause (%d)";
+
+/* Top-right button */
+"deselect_all" = "Deselect All";
+
+/* Section header */
+"section.screenshots_count" = "%d Screenshots";
+
+/* Delete alert */
+"delete_alert.title" = "Delete Screenshots";
+"delete_alert.message" = "Delete %d selected screenshot(s)? This cannot be undone.";
+"cancel" = "Cancel";
+"delete_action" = "Delete";
+
+/* Photo permission */
+"no_photos_access.title" = "Cannot Access Photos";
+"no_photos_access.message" = "Please allow access in Settings > Privacy > Photos";
+"go_to_settings" = "Go to Settings";
+
+/* Tab bar */
+"tab.library" = "Library";
+"tab.collections" = "Collections";
+
+/* Select mode */
+"select" = "Select";
+"select_none" = "Select Items";
+"select_count" = "%d Selected";
+
+/* Sort & Filter */
+"sort" = "Sort";
+"filter" = "Filter";
+"sort.newest_first" = "Newest First";
+"sort.oldest_first" = "Oldest First";
+"filter.all" = "All";
+"filter.last_week" = "Last 7 Days";
+"filter.last_month" = "Last 30 Days";
+"filter.last_year" = "Last Year";
+
+/* Tab bar */
+"tab.settings" = "Settings";
+
+/* Settings */
+"settings.title" = "Settings";
+"settings.section.metadata_filter" = "Library Metadata Filter";
+"settings.filter_people_metadata" = "Exclude Screenshots with People";
+"settings.filter_people_metadata.detail" = "Excludes selfie screenshots (Photos smart album, no extra processing)";
+"settings.section.ai_filter" = "AI Filters";
+"settings.filter_faces" = "Exclude Screenshots with Faces";
+"settings.filter_faces.detail" = "Face detection — fast";
+"settings.filter_people_ai" = "Exclude Screenshots with People (Body)";
+"settings.filter_people_ai.detail" = "Full human body detection — more thorough";
+"settings.filter_barcodes" = "Exclude Screenshots with Barcodes / QR";
+"settings.filter_barcodes.detail" = "Detects barcodes and QR codes";
+"settings.section.library_source" = "Library Source";
+"settings.library_mode" = "Show";
+"settings.library_mode.screenshots" = "Screenshots";
+"settings.library_mode.allPhotos" = "All Photos";
+"settings.library_mode.downloaded" = "Downloaded Images";
+"settings.section.display" = "Display";
+"settings.show_all_photos" = "Show All Photos";
+"settings.show_all_photos.detail" = "Include all photos, not just screenshots";
+"settings.include_screen_size_dimensions" = "Include iPhone-Sized Images";
+"settings.include_screen_size_dimensions.detail" = "Show all images matching historical iPhone screen dimensions, even if not tagged as screenshots";
+"settings.default_columns" = "Default Grid Columns";
+"settings.section.language" = "Language";
+"settings.language" = "Language";
+"settings.language.system" = "System Default";
+
+/* AI analysis (manual, from Settings) */
+"settings.ai_analysis.run" = "Analyze Photos with AI";
+"settings.ai_analysis.run.detail" = "Run on-device AI analysis once to power the filters below. Results are cached — no re-analysis needed on future launches.";
+"ai_analysis.title" = "AI Analysis";
+"ai_analysis.preparing" = "Preparing…";
+"ai_analysis.progress" = "%d / %d analyzed";
+
+"tab.keep" = "Keep";
+"keep.title" = "Keep Library";
+"action.more" = "More";
+"action.mark_keep" = "Mark as Keep";
+"action.skip_analysis" = "Do Not Analyze Again";
+"keep.unmark" = "Unmark Keep";
+"keep.unmark_count" = "Unmark Keep (%d)";
+"keep.delete" = "Delete";
+"keep.delete_count" = "Delete (%d)";
+"keep.unmark_confirm.title" = "Unmark Keep";
+"keep.unmark_confirm.message" = "Move %d screenshot(s) back to library?";
+
+/* Generic */
+"error" = "Error";
+"ok" = "OK";
+"delete_failed" = "Delete failed, please try again";
+"loading.updating_library" = "Updating library…";
+"ai_analysis.completed" = "Analysis complete";
+"ai_analysis.done" = "Done";
+"settings.section.feedback" = "Feedback";
+"settings.feedback.github_issues" = "Report an Issue on GitHub";
+"library.title.screenshots" = "Screenshots";
+"library.title.allPhotos" = "All Photos";
+"library.title.downloaded" = "Downloaded Images";
