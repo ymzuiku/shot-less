@@ -66,7 +66,7 @@ class SettingsViewController: UITableViewController {
             nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -20),
         ])
 
-        container.frame = CGRect(x: 0, y: 0, width: 0, height: 138)
+        container.frame = CGRect(x: 0, y: 0, width: 0, height: 160)
         return container
     }
 
@@ -239,6 +239,7 @@ class SettingsViewController: UITableViewController {
         let row = sections[indexPath.section].rows[indexPath.row]
         switch row {
         case let .navigation(_, _, _, action): action()
+        case let .action(_, _, _, action): action()
         default: break
         }
     }
@@ -339,68 +340,28 @@ private class StepperCell: UITableViewCell {
 private class GlassButtonCell: UITableViewCell {
     static let reuseID = "GlassButtonCell"
 
-    private let glassButton: UIButton = {
-        let config: UIButton.Configuration
-        if #available(iOS 26.0, *) {
-            var c = UIButton.Configuration.glass()
-            c.cornerStyle = .large
-            config = c
-        } else {
-            var c = UIButton.Configuration.filled()
-            c.cornerStyle = .large
-            c.baseBackgroundColor = .systemBlue
-            config = c
-        }
-        let btn = UIButton(configuration: config)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        return btn
-    }()
-
-    private let detailLabel: UILabel = {
-        let l = UILabel()
-        l.font = .systemFont(ofSize: 13, weight: .regular)
-        l.textColor = .secondaryLabel
-        l.numberOfLines = 0
-        l.translatesAutoresizingMaskIntoConstraints = false
-        return l
-    }()
-
     private var onTap: (() -> Void)?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-        backgroundColor = .clear
-
-        contentView.addSubview(glassButton)
-        contentView.addSubview(detailLabel)
-
-        NSLayoutConstraint.activate([
-            glassButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            glassButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            glassButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            glassButton.heightAnchor.constraint(equalToConstant: 50),
-
-            detailLabel.topAnchor.constraint(equalTo: glassButton.bottomAnchor, constant: 8),
-            detailLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            detailLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            detailLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
-        ])
-
-        glassButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .default
+        accessoryType = .disclosureIndicator
+        textLabel?.textColor = .systemBlue
+        detailTextLabel?.numberOfLines = 0
+        detailTextLabel?.textColor = .secondaryLabel
     }
     required init?(coder: NSCoder) { fatalError() }
 
     func configure(title: String, detail: String?, onTap: @escaping () -> Void) {
-        var config = glassButton.configuration ?? UIButton.Configuration.filled()
-        config.title = title
-        glassButton.configuration = config
-        detailLabel.text = detail
-        detailLabel.isHidden = detail == nil
+        textLabel?.text = title
+        detailTextLabel?.text = detail
         self.onTap = onTap
     }
 
-    @objc private func buttonTapped() { onTap?() }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected { onTap?() }
+    }
 }
 
 // MARK: - NavigationCell
