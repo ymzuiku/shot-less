@@ -64,11 +64,13 @@
 "keep.unmark_count" = "Desmarcar conservar (%d)";
 "keep.delete" = "Eliminar";
 "keep.delete_count" = "Eliminar (%d)";
+"keep.empty.title" = "No Kept Screenshots";
+"keep.empty.subtitle" = "Mark screenshots as Keep and they won't appear in the library list.";
 "keep.unmark_confirm.title" = "Desmarcar conservar";
 "keep.unmark_confirm.message" = "¿Mover %d captura(s) de vuelta a la biblioteca?";
 "delete_failed" = "Error al eliminar, inténtalo de nuevo";
 "settings.ai_analysis.run" = "Analyze Photos with AI";
-"settings.ai_analysis.run.detail" = "Run on-device AI analysis once to power the filters below. Results are cached — no re-analysis needed on future launches.";
+"settings.ai_analysis.run.detail" = "Run on-device AI analysis once to power the filters below. Results are cached — no re-analysis needed on future launches.\nUses built-in on-device AI. Accuracy is not guaranteed — suitable for initial filtering only.";
 "ai_analysis.title" = "AI Analysis";
 "ai_analysis.preparing" = "Preparing…";
 "ai_analysis.progress" = "%d / %d analyzed";
@@ -80,3 +82,5 @@
 "library.title.screenshots" = "Screenshots";
 "library.title.allPhotos" = "All Photos";
 "library.title.downloaded" = "Downloaded Images";
+"empty.title" = "No Screenshots Found";
+"empty.subtitle" = "No screenshots were found in your photo library.";

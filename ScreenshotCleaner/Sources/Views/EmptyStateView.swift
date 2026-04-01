@@ -13,7 +13,7 @@ class EmptyStateView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "没有找到截图"
+        label.text = ""
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .label
         label.textAlignment = .center
@@ -22,7 +22,7 @@ class EmptyStateView: UIView {
 
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "您的相册中没有截图"
+        label.text = ""
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1)
         label.textAlignment = .center
@@ -55,6 +55,8 @@ class EmptyStateView: UIView {
         NSLayoutConstraint.activate([
             stack.centerXAnchor.constraint(equalTo: centerXAnchor),
             stack.centerYAnchor.constraint(equalTo: centerYAnchor),
+            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             iconView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }

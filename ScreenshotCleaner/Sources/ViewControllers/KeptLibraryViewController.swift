@@ -43,7 +43,7 @@ class KeptLibraryViewController: UIViewController {
 
     private let emptyStateView: EmptyStateView = {
         let v = EmptyStateView()
-        v.configure(title: "暂无保留截图", subtitle: "你可以把一些图片标记成保留，就不会出现在左侧图库列表里")
+        v.configure(title: L10n.str("keep.empty.title"), subtitle: L10n.str("keep.empty.subtitle"))
         v.isHidden = true
         return v
     }()

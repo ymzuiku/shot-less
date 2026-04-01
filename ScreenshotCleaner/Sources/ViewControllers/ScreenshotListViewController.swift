@@ -124,6 +124,7 @@ class ScreenshotListViewController: UIViewController {
 
     private let emptyStateView: EmptyStateView = {
         let v = EmptyStateView()
+        v.configure(title: L10n.str("empty.title"), subtitle: L10n.str("empty.subtitle"))
         v.isHidden = true
         return v
     }()
@@ -695,7 +696,12 @@ class ScreenshotListViewController: UIViewController {
     private func autoSelectNextBatch() {
         guard isAutoSelecting else { return }
         let end = min(autoSelectCursor + 6, allIndexPaths.count)
-        guard autoSelectCursor < allIndexPaths.count else { autoSelectTimer?.invalidate(); return }
+        guard autoSelectCursor < allIndexPaths.count else {
+            autoSelectTimer?.invalidate()
+            isAutoSelecting = false
+            bottomDeleteBar.setAutoSelectMode(false)
+            return
+        }
 
         for i in autoSelectCursor..<end {
             let indexPath = allIndexPaths[i]

@@ -53,7 +53,7 @@
 "settings.language" = "语言";
 "settings.language.system" = "跟随系统";
 "settings.ai_analysis.run" = "运行 AI 分析照片";
-"settings.ai_analysis.run.detail" = "在本机运行一次 AI 分析，为下方过滤器提供数据。分析结果会缓存，下次启动无需重新分析。";
+"settings.ai_analysis.run.detail" = "在本机运行一次 AI 分析，为下方过滤器提供数据。分析结果会缓存，下次启动无需重新分析。\n使用本地内置 AI 分析，准确度无法保证，只能作为初步筛选。";
 "ai_analysis.title" = "AI 分析";
 "ai_analysis.preparing" = "准备中…";
 "ai_analysis.progress" = "已分析 %d / %d";
@@ -68,6 +68,8 @@
 "keep.unmark_count" = "取消保留 (%d)";
 "keep.delete" = "删除";
 "keep.delete_count" = "删除 (%d)";
+"keep.empty.title" = "暂无保留截图";
+"keep.empty.subtitle" = "你可以把一些图片标记成保留，就不会出现在左侧图库列表里";
 "keep.unmark_confirm.title" = "取消保留";
 "keep.unmark_confirm.message" = "将 %d 张截图移回图库？";
 "delete_failed" = "删除失败，请重试";
@@ -79,3 +81,5 @@
 "library.title.screenshots" = "仅显示截图";
 "library.title.allPhotos" = "所有图片";
 "library.title.downloaded" = "仅显示网络下载图";
+"empty.title" = "没有找到截图";
+"empty.subtitle" = "您的相册中没有截图";

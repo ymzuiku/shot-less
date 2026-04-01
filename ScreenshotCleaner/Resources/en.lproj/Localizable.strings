@@ -76,7 +76,7 @@
 
 /* AI analysis (manual, from Settings) */
 "settings.ai_analysis.run" = "Analyze Photos with AI";
-"settings.ai_analysis.run.detail" = "Run on-device AI analysis once to power the filters below. Results are cached — no re-analysis needed on future launches.";
+"settings.ai_analysis.run.detail" = "Run on-device AI analysis once to power the filters below. Results are cached — no re-analysis needed on future launches.\nUses built-in on-device AI. Accuracy is not guaranteed — suitable for initial filtering only.";
 "ai_analysis.title" = "AI Analysis";
 "ai_analysis.preparing" = "Preparing…";
 "ai_analysis.progress" = "%d / %d analyzed";
@@ -90,6 +90,8 @@
 "keep.unmark_count" = "Unmark Keep (%d)";
 "keep.delete" = "Delete";
 "keep.delete_count" = "Delete (%d)";
+"keep.empty.title" = "No Kept Screenshots";
+"keep.empty.subtitle" = "Mark screenshots as Keep and they won't appear in the library list.";
 "keep.unmark_confirm.title" = "Unmark Keep";
 "keep.unmark_confirm.message" = "Move %d screenshot(s) back to library?";
 
@@ -105,3 +107,5 @@
 "library.title.screenshots" = "Screenshots";
 "library.title.allPhotos" = "All Photos";
 "library.title.downloaded" = "Downloaded Images";
+"empty.title" = "No Screenshots Found";
+"empty.subtitle" = "No screenshots were found in your photo library.";
